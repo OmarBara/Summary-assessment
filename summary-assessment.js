@@ -310,10 +310,11 @@ function each(coll, f) {
   //================================================================================
   // Theoretical questions.
   // 1- In your own words,Why do we use Closures ?
-  
+  // using function inside function to keep all the work in the local scope
   // 2- In OOP, what does "this" refer to ?
-  
+  //acces to the original instance and the proberties inside of it when it was instanciated
   // 3- What is jQuery?
-  
+  //a libaray of javascript that make it easier to use
   // 4- what is the diffrence between Closure's methods and The OOP's methods?
-  
+  //clouser use the function inside of it's original function and keeps all the variable in the local scope of the function
+  // OOP can acces any out of scope function that was linked to it when was instanctiated or forced to bined to it later,  
