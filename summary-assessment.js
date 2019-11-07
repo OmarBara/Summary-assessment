@@ -161,7 +161,7 @@ function each(coll, f) {
       },
       // this is not working yet
       bakePizza: function(){
-        setTimeout("Your order is ready" ,200)
+        setTimeout(function() {return  alert("Your order is ready")} ,2000)
       },
       eatSlice:function(){
         if(numberOfSlice <= 0){
