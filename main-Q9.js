@@ -1,4 +1,3 @@
-function addItem (){
-	var element = querySelector("") 
-}
-alert('err')
+$('#create').click(function(){
+	$("#id").prop('checked')
+})
