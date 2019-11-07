@@ -112,6 +112,11 @@ function each(coll, f) {
   
   function repeatString(str, count) { 
    // TODO: your code here 
+   var tmpStr ='';
+   if( count <=0){
+    return tmpStr;
+   }
+   return  str + repeatString(str, --count)
   } 
    
   
