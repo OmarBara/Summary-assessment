@@ -196,9 +196,32 @@ function each(coll, f) {
   */
   
   // Now, to make sure that you are actually reading, make a comment below this and type: Yes I am
-  
+  //yes i am
   // Write your code here .....
-  
+  function ReadingList() {
+    var readingList = {};
+    readingList.read = 0;
+    readingList.unRead =0;
+    readingList.toRead = [];
+    readingList.currentRead;
+    readingList.readBooks = [];
+    readingList.addBook = AddBook
+
+  }
+
+  var AddBook = function(name) {
+    this.readingList.toRead.push(name);
+    this.readingList.unRead++;
+
+  }
+  var finishCurrentBook = function() {
+  //the current reading will be the first book in the reading list.
+    this.readingList.currentRead =this.readingList[0]
+    this.readingList.readBooks.push(this.readingList.currentRead)
+    this.readingList.read++;
+    this.readingList.toRead = this.readingList.currentRead;
+    this.readingList.unRead--;
+  }
   //=============================================================================
   /*                                  Q7                                       */
   //=============================================================================
@@ -218,7 +241,35 @@ function each(coll, f) {
   //  safe('money','small') => "watch gold-bar money"
   
   // Write your code here .....
-  
+  function makeSafe(storageSizeLimit) {
+    var storageSize = storageSizeLimit;
+    var items ='';
+
+    return   function(item,itemSize) {   
+
+         if(itemSize === 'big' && storageSize >= 3){
+          storageSize -= 3;
+          items += item;
+          console.log(storageSize)
+        }
+        else if(itemSize === 'medium' && storageSize >= 2){
+          storageSize -= 2;
+          items += item;
+          console.log(storageSize)
+        }
+        else if(itemSize === 'small' && storageSize >= 1){
+          storageSize -= 1;
+          items += item;
+          console.log(storageSize)
+        }
+        else if(storageSize === 0){
+          console.log(storageSize)
+          return items;
+        }
+        else {return "Can't fit";console.log(storageSize)}
+      }
+    }
+  //}
   //=============================================================================
   /*                                  Q8                                       */
   //=============================================================================
