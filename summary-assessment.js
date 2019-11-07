@@ -60,7 +60,7 @@ function each(coll, f) {
   
   function wordLengths(str) {
       
-      str =str.split(' ');
+      str = str.split(' ');
       return map(str , function(element){
         return element.length;
       })
@@ -93,6 +93,10 @@ function each(coll, f) {
   
   function wordsLongerThanThree(str) {
       // TODO: your code here 
+      str =str.split(' ');
+      return filter(str , function(element) {
+        return element.length > 3;
+      })
   }
   
   //=============================================================================
