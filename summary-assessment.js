@@ -146,7 +146,33 @@ function each(coll, f) {
   // pizza.eatSlice();
   
   // Write your code here .....
-  
+  function makePizza(crust,size,numberOfSlice) {
+    var crust = crust;
+    var size = size;
+    var numberOfSlice = numberOfSlice;
+    var ingredients =[]; 
+
+    return {
+      addIngredients:function(ingredient) {
+        ingredients.push(ingredient);
+      },
+      displayIngredaints: function(){
+        return ingredients.join()
+      },
+      // this is not working yet
+      bakePizza: function(){
+        setTimeout("Your order is ready" ,200)
+      },
+      eatSlice:function(){
+        if(numberOfSlice <= 0){
+          return 'your slice is finished, you can buy more'
+        }
+        numberOfSlice--;
+         return 'you still have :'+ numberOfSlice +' slice';
+      }
+
+    }
+  }
   //=============================================================================
   /*                                  Q6                                      */
   //=============================================================================
