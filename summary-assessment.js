@@ -77,6 +77,10 @@ function each(coll, f) {
   
   function countOccurrences(string, character) {
       // your code is here
+      var count = filter(string, function(element){
+        return element === character;
+      })
+      return count.length
   }
   
   //=============================================================================
